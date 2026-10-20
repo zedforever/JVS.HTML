@@ -1,17 +1,27 @@
 <!DOCTYPE html>
 <html>
-<body>
-
-<h2>JavaScript can Change HTML</h2>
-
-<p id="p1">Hello World!</p>
+<head>
+<title>Simple Calculator</title>
 
 <script>
-document.getElementById("p1").innerHTML = "New text!";
+function add() {
+    let a = document.getElementById("fn").value;
+    let b = document.getElementById("sn").value;
+    let c = Number(a) + Number(b);
+    document.getElementById("ans").innerHTML = c;
+}
 </script>
 
-<p>The paragraph above was changed by a script.</p>
+</head>
+<body>
+<h3>This is a sample JavaScript document.</h3>
+
+<p>First number? <input id="fn"><br>
+Second number? <input id="sn"><br>
+<button onclick="add()"> Add the Numbers </button>
+</p>
+<p>
+You Answer is <span id="ans"></span></p>
 
 </body>
 </html>
-
